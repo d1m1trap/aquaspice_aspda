@@ -36,7 +36,6 @@ This web application provides a lightweight solution for data analysis, includin
 
 ### Installation
 
-This is an example of how to list things you need to use the software and how to install them.
 * Clone the repository:
   ```sh
   git clone https://github.com/d1m1trap/aquaspice_aspda.git
