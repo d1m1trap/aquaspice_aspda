@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: aspda
+  namespace: aspda
+  labels:
+    app: aspda
+spec:
+  serviceName: aspda
+  replicas: 1
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: aspda
+  template:
+    metadata:
+      labels:
+        app: aspda
+    spec:
+      containers:
+        - name: aspda
+          image: dprdid/aspda:latest
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsUser: 0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8501
+              protocol: TCP
+          #readinessProbe:
+           # initialDelaySeconds: 30
+           # periodSeconds: 15
+           # timeoutSeconds: 10
+           # successThreshold: 2
+           # failureThreshold: 2
+           # httpGet:
+           #   path: /el/
+            #  port: 8000
+          env:
+            - name: KEY
+              value: '9WnuZijZH0z5XwNWkKohwQhYWqw9Nrw8'
+      imagePullSecrets:
+        - name: regcred

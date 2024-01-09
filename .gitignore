@@ -1,0 +1,7 @@
+.venv/
+.streamlit/
+app/data
+.idea
+.env
+
+/DockerfileLocal

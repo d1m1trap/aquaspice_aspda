@@ -1,0 +1,4 @@
+Time,Tag,Variable,Value,Note,Created
+2021-06-02 16:00:00,C3W_AI_0040,Humidity [%],27.828096389770508,Low limit alert was sent,2023-09-18 20:59:05.151718
+2021-03-17 18:00:00,C3W_AI_0053,Inlet liquid temp [C],29.001110076904297,Low limit alert was sent,2023-09-18 21:07:16.647119
+2021-03-26 07:00:00,C3W_AI_0130,Makeup water flow [M3/HR],140.546142578125,Low limit alert was sent,2023-09-18 23:06:25.386496
